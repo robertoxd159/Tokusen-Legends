@@ -1,0 +1,491 @@
+body, html {
+  overflow-x: hidden;
+}
+
+/* estilos.css */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+  color: #eee;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.encabezado {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.encabezado img {
+  max-width: 200px;
+  height: auto;
+  filter: drop-shadow(0 0 6px #e50914);
+}
+
+.portada {
+  background-image: url('../img/fondo.png');
+  background-size: cover;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #e50914cc;
+  margin-bottom: 40px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
+  color: lawngreen;
+}
+
+
+h1 {
+  text-align: center;
+  color: #ff3a3a;
+  text-transform: uppercase;
+  margin: 40px 0 25px 0;
+  font-size: 2rem;
+  letter-spacing: 0.1em;
+  text-shadow: 0 0 8px #e50914;
+}
+
+/* estilos.css */
+
+/* ... (todo el CSS anterior que ya te pasé) ... */
+
+/* Estilo para los enlaces botones de comprar entrada */
+a {
+  display: inline-block;
+  background: #e50914;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 12px 30px;
+  margin: 20px auto 40px auto;
+  border-radius: 30px;
+  box-shadow: 0 0 15px #e50914aa;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+  width: max-content;
+  font-size: 1.1rem;
+  margin-top: 120px;
+}
+
+/* Centrar el link */
+a {
+  display: block;
+  max-width: 220px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a:hover,
+a:focus {
+  background: #ff3a3a;
+  box-shadow: 0 0 25px #ff3a3acc;
+  transform: scale(1.05);
+  outline: none;
+}
+
+a:focus-visible {
+  outline: 3px solid #ff3a3a;
+  outline-offset: 3px;
+}
+
+
+.contenedor-sentai,
+.contenedor-ranger,
+.contenedor-comiccon {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.contenedor-1,
+.contenedor-2,
+.contenedor-3,
+.contenedor-4 {
+  background: #222;
+  border-radius: 12px;
+  flex: 1 1 calc(25% - 20px);
+  max-width: calc(25% - 20px);
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 0 10px #e50914aa;
+}
+
+.contenedor-1:hover,
+.contenedor-2:hover,
+.contenedor-3:hover,
+.contenedor-4:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 0 20px #ff1f1f;
+}
+
+
+
+.contenedor-1 img:hover,
+.contenedor-2 img:hover,
+.contenedor-3 img:hover,
+.contenedor-4 img:hover {
+  filter: drop-shadow(0 0 8px #ff0000);
+}
+
+.contenedor-1 h3,
+.contenedor-2 h3,
+.contenedor-3 h3,
+.contenedor-4 h3 {
+  color: #e50914;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+footer {
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 0.9rem;
+  color: #999;
+  border-top: 1px solid #444;
+  margin-top: 40px;
+  font-style: italic;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .contenedor-1,
+  .contenedor-2,
+  .contenedor-3,
+  .contenedor-4 {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 200px);
+    margin-top: 120px;
+  }
+}
+
+@media (max-width: 550px) {
+
+ .contenedor-ranger,
+  .contenedor-comiccon {
+    margin-left: 0 !important;    /* fuerza quitar margen izquierdo */
+    margin-right: 0 !important;   /* fuerza quitar margen derecho si existe */
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;        /* que ocupe todo el ancho del viewport */
+  }
+
+  .contenedor-ranger > div,
+  .contenedor-comiccon > div {
+    width: 100%;                   /* que el div interno tome todo el ancho */
+    max-width: 300px;              /* limita para que no sea gigante */
+    text-align: center !important;
+    margin: 0 auto !important;     /* centrar el div internamente */
+  }
+  .contenedor-sentai,
+  .contenedor-ranger,
+  .contenedor-comiccon {
+    flex-direction: column; /* que apilen en columna */
+    align-items: center; /* que se centren horizontalmente */
+    gap: 20px; /* espacio decente entre tarjetas */
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .contenedor-1,
+  .contenedor-2,
+  .contenedor-3,
+  .contenedor-4 {
+    flex: none; /* anular flex-grow y flex-shrink */
+    width: 60%; /* que ocupen casi todo el ancho, pero con margen lateral */
+    max-width: 350px; /* para que no se hagan gigantes en pantallas grandes móviles */
+    margin: 10px auto; /* margen arriba y abajo y centrado */
+    padding: 15px;
+    box-sizing: border-box;
+    margin-top: 90px;
+  }
+
+
+  .portada {
+    font-size: 1rem;
+  }
+
+}
+/*borrar de aca abajo*/
+.contenedor-1 img,
+.contenedor-2 img,
+.contenedor-3 img,
+.contenedor-4 img {
+  opacity: 0;
+  position: relative;
+  z-index: 1; /* para que el texto se vea encima */
+height: 370px;
+}
+
+.contenedor-1 {
+  background-image: url('../img/red-flash.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  height: 370px; /* mismo alto que tus imágenes */
+  position: relative;
+  cursor: pointer;
+  transition: background-image 0.4s ease;
+}
+
+.contenedor-1:hover {
+  background-image: url('../img/flash.jpg'); /* la imagen cuando haces hover */
+}
+
+/* Repite para cada contenedor */
+
+.contenedor-2 {
+  background-image: url('../img/red-mask.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  height: 370px;
+  position: relative;
+  cursor: pointer;
+  transition: background-image 0.4s ease;
+}
+
+.contenedor-2:hover {
+  background-image: url('../img/mask.jpg');
+}
+
+.contenedor-3 {
+  background-image: url('../img/red-falcon.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  height: 370px;
+  position: relative;
+  cursor: pointer;
+  transition: background-image 0.4s ease;
+}
+
+.contenedor-3:hover {
+  background-image: url('../img/falcon.jpg');
+}
+
+.contenedor-4 {
+  background-image: url('../img/red-turbo.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  height: 370px;
+  position: relative;
+  cursor: pointer;
+  transition: background-image 0.4s ease;
+}
+
+.contenedor-4:hover {
+  background-image: url('../img/turbo.jpg');
+}
+
+.contenedor-comiccon,
+.contenedor-ranger {
+  margin-left: 0;          /* quitar margen */
+  display: flex;           
+  justify-content: center; /* centrar contenido horizontalmente */
+  align-items: center;     /* centrar vertical si aplica */
+  width: 100%;             /* ocupar todo el ancho padre */
+  /* opcional: agrega max-width si quieres limitar el ancho */
+}
+/*contenedor-ranger,*/
+.contenedor-1p,
+.contenedor-2p,
+.contenedor-3p,
+.contenedor-4p,
+.contenedor-5p {
+  background: #222;
+  border-radius: 12px;
+  flex: 1 1 calc(25% - 20px);
+  max-width: calc(25% - 20px);
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 0 10px #e50914aa;
+  margin-bottom: 150px;
+}
+
+.contenedor-1p:hover,
+.contenedor-2p:hover,
+.contenedor-3p:hover,
+.contenedor-4p:hover,
+.contenedor-5p:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 0 20px #ff1f1f;
+}
+
+
+
+.contenedor-1p img:hover,
+.contenedor-2p img:hover,
+.contenedor-3p img:hover,
+.contenedor-4p img:hover,
+.contenedor-5p img:hover {
+  filter: drop-shadow(0 0 8px #ff0000);
+}
+
+.contenedor-1p h3,
+.contenedor-2p h3,
+.contenedor-3p h3,
+.contenedor-4p h3,
+.contenedor-5p h3 {
+  color: #e50914;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.contenedor-1p img,
+.contenedor-2p img,
+.contenedor-3p img,
+.contenedor-4p img,
+.contenedor-5p img {
+  opacity: 0;
+  position: relative;
+  z-index: 1; /* para que el texto se vea encima */
+height: 370px;
+}
+
+.contenedor-1p {
+  background-image: url('../img/andros.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  height: 370px; /* mismo alto que tus imágenes */
+  position: relative;
+  cursor: pointer;
+  transition: background-image 0.4s ease;
+}
+
+.contenedor-1p:hover {
+  background-image: url('../img/space\ red.jpg'); /* la imagen cuando haces hover */
+}
+
+/* Repite para cada contenedor */
+
+.contenedor-2p {
+  background-image: url('../img/zane.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  height: 370px;
+  position: relative;
+  cursor: pointer;
+  transition: background-image 0.4s ease;
+}
+
+.contenedor-2p:hover {
+  background-image: url('../img/space\ silver.jpg');
+}
+
+.contenedor-3p {
+  background-image: url('../img/taylor.avif');
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  height: 370px;
+  position: relative;
+  cursor: pointer;
+  transition: background-image 0.4s ease;
+}
+
+.contenedor-3p:hover {
+  background-image: url('../img/yellow\ wild\ force.jpg');
+}
+
+.contenedor-4p {
+  background-image: url('../img/danny.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  height: 370px;
+  position: relative;
+  cursor: pointer;
+  transition: background-image 0.4s ease;
+}
+
+.contenedor-4p:hover {
+  background-image: url('../img/black\ wild\ force.jpg');
+}
+
+.contenedor-5p {
+  background-image: url('../img/merrick.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  height: 370px;
+  position: relative;
+  cursor: pointer;
+  transition: background-image 0.4s ease;
+}
+
+.contenedor-5p:hover {
+  background-image: url('../img/lunar\ ranger.jpg');
+}
+
+@media (max-width: 900px) {
+  .contenedor-1p,
+  .contenedor-2p,
+  .contenedor-3p,
+  .contenedor-4p,
+  .contenedor-5p {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 200px);
+    margin-top: 120px;
+  }
+}
+
+@media (max-width: 550px) {
+  
+  .contenedor-ranger{
+    flex-direction: column; /* que apilen en columna */
+    align-items: center; /* que se centren horizontalmente */
+    gap: 140px; /* espacio decente entre tarjetas */
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .contenedor-1p,
+  .contenedor-2p,
+  .contenedor-3p,
+  .contenedor-4p,
+  .contenedor-5p {
+    flex: none; /* anular flex-grow y flex-shrink */
+    width: 60%; /* que ocupen casi todo el ancho, pero con margen lateral */
+    max-width: 350px; /* para que no se hagan gigantes en pantallas grandes móviles */
+    margin: 10px auto; /* margen arriba y abajo y centrado */
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+
+
+
+}
